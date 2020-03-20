@@ -25,13 +25,13 @@ public class Spoof {
                 System.out.printf("%nPlayer 1 turn");
                 int numberOfCoinsToTake = players.get("Player 1").Play(this);
                 this.numberOfCoins -= numberOfCoinsToTake;
-                System.out.printf("%nPlayer 1 removed %d coins%nNumber of coins remaining: %d%n", numberOfCoinsToTake, this.numberOfCoins);
+                System.out.printf("%nPlayer 1 removed %d coins%nNumber of coins remaining: %d", numberOfCoinsToTake, this.numberOfCoins);
                 player1Turn = false;
             } else {
                 System.out.printf("%nPlayer 2 turn");
                 int numberOfCoinsToTake = players.get("Player 2").Play(this);
                 this.numberOfCoins -= numberOfCoinsToTake;
-                System.out.printf("%nPlayer 2 removed %d coins%nNumber of coins remaining: %d%n", numberOfCoinsToTake, this.numberOfCoins);
+                System.out.printf("%nPlayer 2 removed %d coins%nNumber of coins remaining: %d", numberOfCoinsToTake, this.numberOfCoins);
                 player1Turn = true;
             }
 

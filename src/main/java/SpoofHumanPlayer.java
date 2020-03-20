@@ -9,7 +9,7 @@ public class SpoofHumanPlayer implements Player {
 
     @Override
     public int Play(Spoof game) {
-        System.out.printf("%nThere are %d coins left, how many coins do you want to take%n", game.getNumberOfCoins());
+        System.out.printf("%nThere are %d coins left, how many coins do you want to take", game.getNumberOfCoins());
 
         while (true) {
             try {
