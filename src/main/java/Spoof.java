@@ -10,7 +10,8 @@ public class Spoof {
     private Map<String, Player> players;
     private String winner;
 
-    public Spoof(int numberOfCoins, Player... players) {
+    public Spoof(int numberOfCoins, Player... players) throws Exception {
+        if (numberOfCoins <= 0) throw new Exception("The game has to start with 1 of more coins");
         this.orderPlayers(players);
         this.numberOfCoins = numberOfCoins;
         this.in = new Scanner(System.in);
@@ -56,7 +57,7 @@ public class Spoof {
     }
 
     public boolean checkIfGameOver() {
-        return this.numberOfCoins == 0;
+        return this.numberOfCoins <= 0;
     }
 
     public boolean flipCoin() {

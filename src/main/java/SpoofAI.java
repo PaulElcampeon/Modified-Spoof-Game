@@ -2,8 +2,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class SpoofAI implements Player {
 
-    public static int pickCoins(int numOfCoinsOnTable) {
-        if (numOfCoinsOnTable == 0) return 0;
+    private static int pickCoins(int numOfCoinsOnTable) {
+        if (numOfCoinsOnTable <= 0) return 0;
 
         if (numOfCoinsOnTable == 10 || numOfCoinsOnTable == 1) return 1;
 
